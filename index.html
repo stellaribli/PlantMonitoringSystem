@@ -4,6 +4,7 @@
 <head>
     <title>Smart Monitoring</title>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="plant.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -15,28 +16,27 @@
 
     <style>
         iframe {
-            height: 300px;
-            width: 500px;
+            height: 30vh;
+            width: 100%;
         }
     </style>
 
 </head>
 
 <body>
-    <div class="row" style="height: 10vh"></div>
     <div class="row">
         <div class="col text-center"
-            style="display: inline-block;overflow: hidden;white-space: nowrap;padding-left:7%;padding-right:7%;font-size: 3vw; font-family: 'Inter'; letter-spacing: 0.1em; color: #5B5772;">
+            style="display: inline-block;overflow: hidden;white-space: nowrap;padding-left:7%;padding-right:7%;padding-bottom:1.5%;padding-top:1.5%;font-size: 3vw; font-family: 'Inter'; letter-spacing: 0.1em; color: #5B5772;">
             SMART PLANT MONITORING AND WATERING SYSTEM</div>
     </div>
-    <div class="row" style="height: 15px;"></div>
     <div class="row">
         <div class="col-sm-3">
-            <img src='plant.png'>
+            <img src='plant.png' style='width: 90%;'>
             <p></p>
-            <p style="font-family: 'Rubik', sans-serif; color: #6E6893;font-size: 1vw; text-align: center;">Water Pump
+            <p style="font-family: 'Rubik', sans-serif; color: #6E6893;font-size: 1.5vw; text-align: center;">Water Pump
                 Status</p>
-            <iframe src="https://thingspeak.com/channels/1713650/widgets/450360"></iframe>
+            <iframe src="https://thingspeak.com/channels/1713650/widgets/450360"
+                style="height: 27vh;width: 100%;"></iframe>
 
         </div>
         <div class="col-sm-8 text-dark">
@@ -51,29 +51,39 @@
             </div>
             <div class="row">
                 <div class=" col-sm-1">
-                    <u contenteditable="true" style="font-family: 'Rubik', sans-serif; color: #6E6893; font-size: 3vw;">
-                        35</u>
+                    <u contenteditable="true"
+                        style="font-family: 'Rubik', sans-serif; color: #6E6893; font-size: 3vw;font-style:light;font-weight:100">
+                        35 </u>
                 </div>
                 <div class=" col-sm-1">
-                    <p style="font-family: 'Rubik', sans-serif; color: #6E6893; font-size: 3vw;">
+                    <p
+                        style="font-family: 'Rubik', sans-serif; color: #6E6893; font-size: 3vw;font-style:light;font-weight:100">
                         hari</p>
                 </div>
             </div>
             <div class="row">
-                <div class=" col-sm-6">
+                <div class="col-sm-10">
+                    <p style="font-family: 'Rubik', sans-serif; color: #6E6893;font-size: 1.5vw; text-align: center;">
+                        Monitoring Result
+                        Status</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-sm-6" style="height: 30vh;width: 50%;">
                     <iframe
                         src="https://thingspeak.com/channels/1713650/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=10&title=Temperature&type=line&xaxis=Time"></iframe>
                 </div>
-                <div class=" col-sm-6">
+                <div class=" col-sm-6" style="height: 30vh;width: 50%;">
                     <iframe
                         src="https://thingspeak.com/channels/1713650/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line&xaxis=Time"></iframe>
                 </div>
             </div>
+
             <div class="row">
-                <div class=" col-sm-6"><iframe
+                <div class=" col-sm-6" style="height: 30vh;width: 50%;"><iframe
                         src="https://thingspeak.com/channels/1713650/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=10&title=Water+Capacity&type=line&xaxis=Time"></iframe>
                 </div>
-                <div class=" col-sm-6">
+                <div class=" col-sm-6" style="height: 30vh;width: 50%;">
                     <iframe
                         src="https://thingspeak.com/channels/1713650/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Environment+Humidity&type=line&xaxis=Time"></iframe>
                 </div>
