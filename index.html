@@ -12,23 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
-    <!-- <script>
-        alert('Test')
-        var theContent = $('#content1');
 
-        $('#save').on('click', function () {
-            var editedContent = theContent.html();
-            localStorage.newContent = editedContent;
-        });
-    </script> -->
     <style>
-        /* body {
-            background-image: url('plant.png');
-            background-size: 30% 50%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: bottom right;
-        } */
+        iframe {
+            height: 300px;
+            width: 500px;
+        }
     </style>
 
 </head>
@@ -42,8 +31,13 @@
     </div>
     <div class="row" style="height: 15px;"></div>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <img src='plant.png'>
+            <p></p>
+            <p style="font-family: 'Rubik', sans-serif; color: #6E6893;font-size: 1vw; text-align: center;">Water Pump
+                Status</p>
+            <iframe src="https://thingspeak.com/channels/1713650/widgets/450360"></iframe>
+
         </div>
         <div class="col-sm-8 text-dark">
             <div class="row">
@@ -51,22 +45,41 @@
                     <div class=" col-sm-8">
                         <u contenteditable="true"
                             style="font-family: 'Rubik', sans-serif; color: #6E6893;font-size: 3vw;">
-                            Nama Tanaman</u>
+                            Mawar</u>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class=" col-sm-1">
                     <u contenteditable="true" style="font-family: 'Rubik', sans-serif; color: #6E6893; font-size: 3vw;">
-                        XX</u>
+                        35</u>
                 </div>
                 <div class=" col-sm-1">
                     <p style="font-family: 'Rubik', sans-serif; color: #6E6893; font-size: 3vw;">
                         hari</p>
                 </div>
             </div>
-            <div class="row bg-dark" style="height:0%">
-                <p>TEMPAT DATA NANTI</p>
+            <div class="row">
+                <div class=" col-sm-6">
+                    <iframe
+                        src="https://thingspeak.com/channels/1713650/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=10&title=Temperature&type=line&xaxis=Time"></iframe>
+                </div>
+                <div class=" col-sm-6">
+                    <iframe
+                        src="https://thingspeak.com/channels/1713650/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Humidity&type=line&xaxis=Time"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-sm-6"><iframe
+                        src="https://thingspeak.com/channels/1713650/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&timescale=10&title=Water+Capacity&type=line&xaxis=Time"></iframe>
+                </div>
+                <div class=" col-sm-6">
+                    <iframe
+                        src="https://thingspeak.com/channels/1713650/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Environment+Humidity&type=line&xaxis=Time"></iframe>
+                </div>
+            </div>
+            <div class="row">
+
             </div>
         </div>
     </div>
